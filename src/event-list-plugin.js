@@ -49,6 +49,12 @@ class EBEventListFactory {
         return pageNumbers;
     }
 
+    _formatDateString(dateStr) {
+        let date = new Date(dateStr);
+
+        return date.toLocaleDateString();
+    }
+
     _getEventMarkup(event) {
         const eventDescription = event.summary ?
         `<div class="event description">
@@ -72,7 +78,7 @@ class EBEventListFactory {
                         </h1>
                         <div class="date icon-date">
                             <span class="date__day">
-                                ${event.start_date}
+                                ${this._formatDateString(event.start_date)}
                             </span>
                             <span class="date__time">
                                 ${event.start_time} - ${event.end_time}
