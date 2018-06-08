@@ -9,6 +9,7 @@ before_script:
 script: gulp
 deploy:
   - provider: pages
+    github_token: $GITHUB_AMBER_ROCKWOOD
     skip_cleanup: true
     local_dir: dist
     on:
