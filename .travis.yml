@@ -1,4 +1,12 @@
-before_deploy: npm install && npm install -g gulp-cli && gulp
+
+language: node_js
+node_js:
+- 6.11.2
+env:
+- CXX=g++-4.8
+before_script:
+  - npm install -g gulp-cli
+script: gulp
 deploy:
   - provider: pages
     skip_cleanup: true
