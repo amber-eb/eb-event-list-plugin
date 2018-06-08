@@ -1,0 +1,11 @@
+# Dist
+dist
+dist/*
+
+# Test file
+test.html
+
+# Jest / Lint caches
+js_0
+.eslintcache
+junit.xml
